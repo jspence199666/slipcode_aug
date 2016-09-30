@@ -12,70 +12,41 @@ import UIKit
 
 class CloudKitAuthentication {
     
-    let container = CKContainer.default()
-    let user = User.sharedInstance
-    static let sharedAuthenticationInstance = CloudKitAuthentication()
-    var isLoggedIn: Bool?
+    static let container = CKContainer.default()
+    var user = User.sharedInstance
     
     
-    enum UserRecordAttributes: String {
-        case name, bio, pictures, scans, slips, accounts
+    static func requestPermission(completionHandler: @escaping (_ granted: Bool) -> ()) {
+        container.requestApplicationPermission(CKApplicationPermissions.userDiscoverability, completionHandler: { applicationPermissionStatus, error in
+            if applicationPermissionStatus == CKApplicationPermissionStatus.granted {
+                completionHandler(true)
+            } else {
+                // very simple error handling
+                completionHandler(false)
+            }
+        })
     }
-
-    func checkLoginStatus(completionHandler: @escaping (_ success: Bool) -> ()) {
+    
+    static func getUser(completionHandler: @escaping (_ success: Bool) -> ()) {
         
-        
-        
-        CKContainer.default().requestApplicationPermission(CKApplicationPermissions.userDiscoverability) {
-            (applicationPermissionStatus, error) in
-            CKContainer.default().accountStatus() {
-                accountStatus, error in
-                if error != nil {
-                    print(error?.localizedDescription)
-                } else {
-                    if accountStatus == CKAccountStatus.available {
-                        print("Account is Available")
-                        CKContainer.default().fetchUserRecordID() {
-                            recordId, error in
-                            if error != nil {
-                                print(error?.localizedDescription)
-                                
-                            } else {
-                                print(recordId!.recordName + " logged in")
-                                print("set true")
-                                completionHandler(true)
-                            }
-                        }
+        container.fetchUserRecordID {
+            (userRecordID, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+                completionHandler(false)
+            } else {
+                
+                self.container.privateCloudDatabase.fetch(withRecordID: userRecordID!, completionHandler: {
+                    (record, error) in
+                    if (error != nil) {
+                        print(error?.localizedDescription)
+                        completionHandler(false)
+                    } else {
+                        completionHandler(true)
                     }
-                    if accountStatus == CKAccountStatus.couldNotDetermine {
-                        print("Could not determine")
-                    }
-                    if accountStatus == CKAccountStatus.restricted {
-                        print("Restricted account")
-                    }
-                    if accountStatus == CKAccountStatus.noAccount {
-                        print("No Account")
-                    }
-                }
+                })
                 
             }
-        }
-        
-    }
-    
-    
-    
-    func setDefaults() {
-        
-        
-        if UserDefaults().bool(forKey: "isLoggedIn") == false {
-            UserDefaults().set("", forKey: "bio")
-            UserDefaults().set(["":""], forKey: "accounts")
-            UserDefaults().set("", forKey: "name")
-            
-            print("set blank defaults")
-            
-            // Configure first time on the app here
         }
     }
     

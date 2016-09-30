@@ -255,7 +255,7 @@ open class QRCode: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     
     func createPath(_ points: NSArray) -> UIBezierPath {
         let path = UIBezierPath()
-        var point = CGPoint()
+        let point = CGPoint()
         
         CGPoint.init(dictionaryRepresentation: (points[0] as! CFDictionary))
         path.move(to: point)

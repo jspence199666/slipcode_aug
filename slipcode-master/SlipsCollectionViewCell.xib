@@ -23,56 +23,56 @@
                         <frame key="frameInset" minX="42" minY="194" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="f"/>
+                        <state key="normal" title="a"/>
                     </button>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyl-Ff-GdS">
                         <frame key="frameInset" minX="82" minY="194" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="t"/>
+                        <state key="normal" title="a"/>
                     </button>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0m-6t-MiH">
                         <frame key="frameInset" minX="122" minY="194" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="s"/>
+                        <state key="normal" title="a"/>
                     </button>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYE-4M-bKv">
                         <frame key="frameInset" minX="162" minY="194" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="ig"/>
+                        <state key="normal" title="a"/>
                     </button>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRs-Ou-59V">
                         <frame key="frameInset" minX="82" minY="234" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="li"/>
+                        <state key="normal" title="a"/>
                     </button>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qto-dm-HJ6">
                         <frame key="frameInset" minX="122" minY="234" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="e"/>
+                        <state key="normal" title="a"/>
                     </button>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf7-pt-PNI">
                         <frame key="frameInset" minX="42" minY="234" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="p"/>
+                        <state key="normal" title="a"/>
                     </button>
                 </subviews>
             </view>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
-                <outlet property="email" destination="Qto-dm-HJ6" id="WMg-yl-DFc"/>
-                <outlet property="facebook" destination="SJg-C6-shN" id="CMb-ah-b8L"/>
-                <outlet property="instagram" destination="wYE-4M-bKv" id="8Mq-Uy-NTR"/>
-                <outlet property="linkedin" destination="cRs-Ou-59V" id="Ikw-W2-bXW"/>
-                <outlet property="phone" destination="Rf7-pt-PNI" id="0wD-AM-tn2"/>
+                <outlet property="button1" destination="SJg-C6-shN" id="6kA-Ew-ccj"/>
+                <outlet property="button2" destination="eyl-Ff-GdS" id="Yb0-re-p39"/>
+                <outlet property="button3" destination="I0m-6t-MiH" id="ks2-3O-Tg3"/>
+                <outlet property="button4" destination="wYE-4M-bKv" id="RY2-Fq-mZn"/>
+                <outlet property="button5" destination="Rf7-pt-PNI" id="MXn-n3-3bA"/>
+                <outlet property="button6" destination="cRs-Ou-59V" id="ajo-AP-Cl7"/>
+                <outlet property="button7" destination="Qto-dm-HJ6" id="dul-tV-YXK"/>
                 <outlet property="qrView" destination="tUP-vH-Tgd" id="hgb-9g-LIS"/>
-                <outlet property="snapchat" destination="I0m-6t-MiH" id="uVS-W5-Klc"/>
-                <outlet property="twitter" destination="eyl-Ff-GdS" id="aMe-tT-Ylc"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </collectionViewCell>

@@ -10,30 +10,34 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    //MARK: - Setup Variables
+    
     @IBOutlet weak var slipsCollectionView: UICollectionView!
     let user = User.sharedInstance
     var slips: [Slip] = []
     
+    //MARK: - UIViewController Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
+        // setup collectionView
         let nib = UINib(nibName: "SlipsCollectionViewCell", bundle: nil)
         slipsCollectionView.register(nib, forCellWithReuseIdentifier: "SlipCell")
         slipsCollectionView.delegate = self
         slipsCollectionView.dataSource = self
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print(user.slips.count)
         self.slips = user.slips
-        print(self.slips.count)
         self.slipsCollectionView.reloadData()
-        
     }
+    
+    //MARK: - Segues
     
     @IBAction func newSlipSeque(_ sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -51,6 +55,8 @@ class ProfileViewController: UIViewController {
     
     
 }
+
+//MARK: - Collection View Methods
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     

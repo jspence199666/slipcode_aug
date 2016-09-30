@@ -12,44 +12,71 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     var user = User.sharedInstance
+    let handler = HandleUser()
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.nameTextField.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    
     
     @IBAction func tryAgain(_ sender: AnyObject) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        CloudKitAuthentication().checkLoginStatus { (success) in
+        self.iCloudLogin(completionHandler: { (success) -> () in
             if success {
-                if self.nameTextField.text != nil {
-                    UserDefaults.standard.set(true, forKey: "loggedInStatus")
-                    self.user.fullName = self.nameTextField.text
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                
+                if let name = self.nameTextField.text {
+                    self.user.fullName = name
+                    self.handler.save(completionHandler: { (success) in
+                        
+                        UserDefaults.standard.set(true, forKey: "LoggedInStatus")
+                        
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+                        self.present(viewController, animated: false, completion: nil)
+                    })
                     
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! SlipViewController
-                    self.present(viewController, animated: true, completion: nil)
+                    
                     
                 } else {
-                    print("text field is empty")
+                    print("Text field not filled in")
                 }
+                
+                
             } else {
-                print("not logged into iCloud")
+                print("user not logged into iCloud")
             }
-
-        }
+        })
     }
     
-    
-    
+    func iCloudLogin(completionHandler: @escaping (_ success: Bool) -> ()) {
+        CloudKitAuthentication.requestPermission { (granted) -> () in
+            if !granted {
+                print("Error not granted")
+            } else {
+                print("granted")
+                CloudKitAuthentication.getUser(completionHandler: { (success) -> () in
+                    if success {
+                        print("got user")
+                        completionHandler(true)
+                    } else {
+                        // TODO: - error handling
+                    }
+                })
+            }
+        }
+    }
 }
+
+
+
+

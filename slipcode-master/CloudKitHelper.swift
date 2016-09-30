@@ -2,7 +2,7 @@
 //  CloudKitHelper.swift
 //  slipcode-master
 //
-//  Created by Jeremy Spence on 9/24/16.
+//  Created by Jeremy Spence on 9/30/16.
 //  Copyright © 2016 Jeremy Spence. All rights reserved.
 //
 
@@ -10,127 +10,75 @@ import Foundation
 import CloudKit
 import UIKit
 
+class CloudKitHelper {
+    
+    let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat")!
 
-class LoadSlipsHelper {
     
-    
-    open func convertToSlips(_ records: [CKRecord]) -> [Slip] {
+    func convertDictToArr(dict: [String: String]) -> [String] {
+        var newArr: [String] = []
         
-        var slipsArr: [Slip] = []
-        
-        for record in records {
-            
-            let newSlip = Slip()
-            
-            newSlip.accounts = getAccountsFromSlip(record["accounts"] as? [String] ?? [])
-            newSlip.bio = record["bio"] as? String ?? ""
-            newSlip.scannedMe = [] // get from user IDs that are in the slip arr
-            newSlip.pictures = getPicturesFromSlip(record)
-            newSlip.qrCode = record.recordID.recordName
-            
-            slipsArr.append(newSlip)
-            
+        for (key,value) in dict {
+            let combination = "\(key) \(value)"
+            newArr.append(combination)
         }
         
-        return slipsArr
-        
+        return newArr
         
     }
     
-    
-    fileprivate func getAccountsFromSlip(_ accountsStringArr: [String]) -> [String: String] {
+    func convertArrToDict(arr: [String]) -> [String: String] {
+        var newDict: [String: String] = [:]
         
-        var accountsDict: [String: String] = [:]
-        
-        for item in accountsStringArr {
-            let holderArr = item.characters.split(separator: " ").map(String.init)
-            accountsDict[holderArr[0]] = holderArr[1]
-            
-            
+        for item in arr {
+            var splitString = item.characters.split{$0 == " "}.map(String.init)
+            newDict[splitString[0]] = splitString[1]
         }
-        
-        return accountsDict
-        
+        return newDict
     }
     
-    fileprivate func getScannedMeFromSlip(_ userRecords: [CKRecordID]) -> [ScannedMe] {
+    func convertAssetToUIImage(assets: [CKAsset]?) -> [UIImage] {
+        var newImageArr: [UIImage] = []
         
-        let scannedMeArr: [ScannedMe] = []
-        
-        for item in userRecords {
-            
-            //TODO: - get users from their recordID and convert to ScannedMe model and add to arr
-            
+        guard let ckassets = assets else {
+            print("no assets")
+            return []
         }
         
-        return scannedMeArr
-        
-    }
-    
-    fileprivate func getPicturesFromSlip(_ record: CKRecord) -> [UIImage] {
-        
-        var imagesArr: [UIImage] = []
-        
-        if let assets = record["pictures"] as? [CKAsset] {
+        for asset in ckassets {
+            let newImage = UIImage(contentsOfFile: asset.fileURL.absoluteString)
             
-            for asset in assets {
-                
-                do {
-                    let imageData: Data
-                    try imageData = Data(contentsOf: asset.fileURL)
-                    let image = UIImage(data: imageData as Data)
-                    imagesArr.append(image!)
-                } catch {
-                    print(error.localizedDescription)
-                }
-                
-                
+            if newImage != nil {
+                newImageArr.append(newImage!)
             }
         }
-        
-        return imagesArr
-        
+        return newImageArr
     }
     
-    
-    
-}
-
-
-class SaveSlipsHelper {
-    
-    open func convertToAsset(_ images: [UIImage]) -> [CKAsset] {
-        
-        var assets: [CKAsset] = []
+    func convertUIImagesToAssets(images: [UIImage]) -> [CKAsset] {
+        var newAssetArr: [CKAsset] = []
         
         for image in images {
+            
             do {
                 let data = UIImagePNGRepresentation(image)!
-                try data.write(to: URL(fileURLWithPath: "temp_url.png"), options: Data.WritingOptions.atomicWrite)
-                let asset = CKAsset(fileURL: URL(fileURLWithPath: "temp_url.png"))
-                assets.append(asset)
+                try data.write(to: self.url, options: NSData.WritingOptions.atomicWrite)
+                let asset = CKAsset(fileURL: self.url)
+                newAssetArr.append(asset)
             }
             catch {
                 print("Error writing data", error)
             }
+            
         }
-        
-        return assets
-
+        return newAssetArr
         
     }
     
-    open func convertToArr(_ dict: [String: String]) -> [String] {
-        var arr: [String] = []
-        
-        for (key, value) in dict {
-            arr.append("\(key) \(value)")
-        }
-        
-        return arr
-    }
+
     
 }
+
 
 
 

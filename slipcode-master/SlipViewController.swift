@@ -13,8 +13,11 @@ class SlipViewController: UIViewController {
     
     var user = User.sharedInstance
     var slip = Slip()
-    var accountArr: [UIButton] = []
-    var imageArr: [UIButton] = []
+    let handler = HandleUser()
+    let manager = CloudKitManager()
+    
+    var accountButtonArr: [UIButton] = []
+    var imageButtonArr: [UIButton] = []
     
     
     @IBOutlet weak var fullName: UILabel!
@@ -141,17 +144,13 @@ class SlipViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.accountArr = [account1, account2, account3, account4, account5, account6, account7]
-        self.imageArr = [image1, image2, image3, image4, image5, image6]
-        
+        self.accountButtonArr = [account1, account2, account3, account4, account5, account6, account7]
+        self.imageButtonArr = [image1, image2, image3, image4, image5, image6]
+        print("setting up buttons")
         accountButtonSetActions()
         imageButtonSetActions()
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     @IBAction func close(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
@@ -159,27 +158,33 @@ class SlipViewController: UIViewController {
     
     @IBAction func save(_ sender: AnyObject) {
         if slip.accounts.count > 0 && slip.pictures.count > 0 {
-            //Save slip in iCloud
+            print("saving slip")
             
             let newSlip = Slip()
             newSlip.accounts = slip.accounts
-            newSlip.bio = user.bio
             newSlip.nameOfUser = user.fullName
             newSlip.pictures = slip.pictures
+            newSlip.bio = slip.bio
             
-            
-            CloudKitManager.saveNewSlip(newSlip, completionHandler: {
-                (recordName) in
-                
-                newSlip.qrCode? = recordName
-                print(newSlip.qrCode)
-                self.user.slips.append(newSlip)
-                print(self.user.slips.count)
-                self.dismiss(animated: true, completion: nil)
-                print(recordName)
-                
+            self.user.slips.append(newSlip)
+            self.handler.save(completionHandler: { (success) in
+                if success {
+                    
+                    self.manager.saveSlip(slip: newSlip, completionHandler: { (recordId) in
+                        print("saved to iCloud")
+                        
+                        self.user.slips[self.user.slips.count - 1].recordId = recordId
+                        self.handler.save(completionHandler: { (success) in
+                            if success {}
+                        })
+                        
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                    
+                }
             })
             
+           
             
             
         }
@@ -187,7 +192,7 @@ class SlipViewController: UIViewController {
     
     
     func accountButtonSetActions() {
-        for account in self.accountArr {
+        for account in self.accountButtonArr {
             account.addTarget(self, action: #selector(accountAction), for: .touchUpInside)
         }
         
@@ -198,7 +203,7 @@ class SlipViewController: UIViewController {
     }
     
     func imageButtonSetActions() {
-        for image  in self.imageArr {
+        for image in self.imageButtonArr {
             image.addTarget(self, action: #selector(imageAction), for: .touchUpInside)
         }
         
@@ -219,16 +224,16 @@ class SlipViewController: UIViewController {
     }
     
     func setupButtons() {
-        
+        print("setting up what buttons show")
         var activeAccountButtons: [UIButton] = []
         var activeImages: [UIButton] = []
         var x = 0
         var y = 0
         print("\(slip.accounts.count) accounts: \(slip.pictures.count) pictures")
         
-        for button in self.accountArr {
+        for button in self.accountButtonArr {
             
-            if accountArr.index(of: button)! <= (slip.accounts.count) {
+            if accountButtonArr.index(of: button)! <= (slip.accounts.count) {
                 print("setting up \(x) button")
                 activeAccountButtons.append(button)
             }
@@ -242,8 +247,8 @@ class SlipViewController: UIViewController {
             
         }
         
-        for image in self.imageArr {
-            if imageArr.index(of: image)! <= (slip.pictures.count) {
+        for image in self.imageButtonArr {
+            if imageButtonArr.index(of: image)! <= (slip.pictures.count) {
                 print("setting up \(y) image")
                 activeImages.append(image)
             }

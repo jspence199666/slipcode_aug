@@ -16,37 +16,23 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2y-Mf-vj2">
-                        <frame key="frameInset" minX="-20" minY="84" maxX="-20" maxY="84"/>
+                        <frame key="frameInset"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aj8-HZ-fC1">
+                                <frame key="frameInset" minX="71" minY="90" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.2901960784" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3WT-Da-lVX">
-                        <frame key="frameInset" minY="170" width="200" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Z6Z-sG-iAP">
-                            <frame key="frameInset"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FcW-j9-z8K">
-                                    <frame key="frameInset" minX="8" minY="4" width="184" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="FcW-j9-z8K" firstAttribute="top" secondItem="Z6Z-sG-iAP" secondAttribute="top" constant="4" id="HtH-T2-Z8O"/>
-                                <constraint firstAttribute="trailing" secondItem="FcW-j9-z8K" secondAttribute="trailing" constant="8" id="JIr-37-vJb"/>
-                                <constraint firstAttribute="bottom" secondItem="FcW-j9-z8K" secondAttribute="bottom" constant="5" id="PrX-CD-ips"/>
-                                <constraint firstItem="FcW-j9-z8K" firstAttribute="leading" secondItem="Z6Z-sG-iAP" secondAttribute="leading" constant="8" id="mix-gb-wU1"/>
-                            </constraints>
-                        </view>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <blurEffect style="light"/>
-                    </visualEffectView>
                 </subviews>
             </view>
             <connections>
-                <outlet property="nameLabel" destination="FcW-j9-z8K" id="tSN-aQ-qIA"/>
+                <outlet property="nameLabel" destination="Aj8-HZ-fC1" id="eEi-2n-Rsn"/>
             </connections>
         </collectionViewCell>
     </objects>

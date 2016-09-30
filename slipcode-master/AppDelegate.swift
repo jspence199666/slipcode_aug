@@ -12,25 +12,26 @@ import CloudKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var user = User.sharedInstance
-    var authentication = CloudKitAuthentication.sharedAuthenticationInstance
     var window: UIWindow?
-    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if UserDefaults.standard.bool(forKey: "loggedInStatus") {
+        
+        let handler = HandleUser()
+        var isFirstOpen = true
+        
+        if UserDefaults.standard.bool(forKey: "LoggedInStatus") {
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as UIViewController
+            
+            handler.load()
+            
         } else {
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as UIViewController
+            
+            if isFirstOpen { handler.setupNewUser(); isFirstOpen = false }
+            
         }
-        
-        
-        //TODO: - Load all CloudKit data here
-        
-        user.slips = CloudKitManager().loadSlipRecords() ?? []
-        user.scans = CloudKitManager().loadScanRecords() ?? []
         
         return true
     }

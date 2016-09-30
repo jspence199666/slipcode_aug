@@ -30,13 +30,14 @@
 		6C97AD681D964E3600DAAB8D /* Slip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD671D964E3600DAAB8D /* Slip.swift */; };
 		6C97AD6A1D96526800DAAB8D /* ScannedMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD691D96526800DAAB8D /* ScannedMe.swift */; };
 		6C97AD6C1D96D70B00DAAB8D /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD6B1D96D70B00DAAB8D /* CloudKitManager.swift */; };
-		6C97AD6E1D96DE2E00DAAB8D /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD6D1D96DE2E00DAAB8D /* CloudKitHelper.swift */; };
 		6C97AD721D96F0FD00DAAB8D /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD711D96F0FD00DAAB8D /* Scan.swift */; };
 		6C97AD761D9888C600DAAB8D /* AddAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD751D9888C600DAAB8D /* AddAccountsViewController.swift */; };
 		6C97AD781D9888D400DAAB8D /* AddPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD771D9888D400DAAB8D /* AddPicturesViewController.swift */; };
 		6C97AD981D9A0AA900DAAB8D /* ScanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD971D9A0AA800DAAB8D /* ScanDetailViewController.swift */; };
 		6C97AD9D1D9A2D1C00DAAB8D /* ScanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97AD9B1D9A2D1C00DAAB8D /* ScanCollectionViewCell.swift */; };
 		6C97AD9E1D9A2D1C00DAAB8D /* ScanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C97AD9C1D9A2D1C00DAAB8D /* ScanCollectionViewCell.xib */; };
+		6C97ADAF1D9B804800DAAB8D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97ADAE1D9B804800DAAB8D /* MapViewController.swift */; };
+		6CA40CF81D9E396F00A2AF80 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA40CF71D9E396F00A2AF80 /* CloudKitHelper.swift */; };
 		DFFD37DD318E169502096B11 /* Pods_slipcode_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4383346F7A5D4203C0184873 /* Pods_slipcode_master.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,13 +83,14 @@
 		6C97AD671D964E3600DAAB8D /* Slip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slip.swift; sourceTree = "<group>"; };
 		6C97AD691D96526800DAAB8D /* ScannedMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedMe.swift; sourceTree = "<group>"; };
 		6C97AD6B1D96D70B00DAAB8D /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
-		6C97AD6D1D96DE2E00DAAB8D /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		6C97AD711D96F0FD00DAAB8D /* Scan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 		6C97AD751D9888C600DAAB8D /* AddAccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountsViewController.swift; sourceTree = "<group>"; };
 		6C97AD771D9888D400DAAB8D /* AddPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPicturesViewController.swift; sourceTree = "<group>"; };
 		6C97AD971D9A0AA800DAAB8D /* ScanDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanDetailViewController.swift; sourceTree = "<group>"; };
 		6C97AD9B1D9A2D1C00DAAB8D /* ScanCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C97AD9C1D9A2D1C00DAAB8D /* ScanCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanCollectionViewCell.xib; sourceTree = "<group>"; };
+		6C97ADAE1D9B804800DAAB8D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6CA40CF71D9E396F00A2AF80 /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		CEE9DC1A4D8F80B915A756D4 /* Pods-slipcode-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slipcode-master.release.xcconfig"; path = "Pods/Target Support Files/Pods-slipcode-master/Pods-slipcode-master.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,10 +146,11 @@
 		6C5CF2871D8DB59D00586027 /* slipcode-master */ = {
 			isa = PBXGroup;
 			children = (
-				6C5CF29B1D8DB5B700586027 /* App */,
+				6C5CF2881D8DB59D00586027 /* AppDelegate.swift */,
+				6C97ADB11D9B809000DAAB8D /* Views */,
 				6C5CF2BC1D8DBD2100586027 /* Controllers */,
-				6C5CF2BD1D8DBD2F00586027 /* CloudKit */,
 				6C5CF2BE1D8DBD3800586027 /* Models */,
+				6C5CF2BD1D8DBD2F00586027 /* CloudKit */,
 				6C5CF29A1D8DB5AB00586027 /* Supporting Files */,
 			);
 			path = "slipcode-master";
@@ -163,31 +166,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6C5CF29B1D8DB5B700586027 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				6CFD29AC1D8E48A6001E341E /* Interface Builder */,
-				6C5CF2881D8DB59D00586027 /* AppDelegate.swift */,
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
 		6C5CF2BC1D8DBD2100586027 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6C97AD631D96357E00DAAB8D /* LoginViewController.swift */,
 				6C5CF29E1D8DBC3400586027 /* MainViewController.swift */,
 				6C5CF3011D8DDF4800586027 /* ProfileViewController.swift */,
 				6C5CF3051D8DDF5500586027 /* CameraViewController.swift */,
+				6C97AD971D9A0AA800DAAB8D /* ScanDetailViewController.swift */,
+				6C97ADAE1D9B804800DAAB8D /* MapViewController.swift */,
 				6C5CF3091D8DDF6300586027 /* FriendsViewController.swift */,
-				6C735CF31D9386E400BA12DF /* SettingsTableViewController.swift */,
-				6C735CF71D938D4A00BA12DF /* SlipsCollectionViewCell.swift */,
 				6C735CFB1D938E1000BA12DF /* SlipViewController.swift */,
 				6C735CFD1D9399FD00BA12DF /* ScannedMeTableViewController.swift */,
-				6C97AD631D96357E00DAAB8D /* LoginViewController.swift */,
 				6C97AD751D9888C600DAAB8D /* AddAccountsViewController.swift */,
 				6C97AD771D9888D400DAAB8D /* AddPicturesViewController.swift */,
-				6C97AD971D9A0AA800DAAB8D /* ScanDetailViewController.swift */,
-				6C97AD9B1D9A2D1C00DAAB8D /* ScanCollectionViewCell.swift */,
+				6C735CF31D9386E400BA12DF /* SettingsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -197,7 +190,7 @@
 			children = (
 				6C735D041D93A43700BA12DF /* CloudKitAuthentication.swift */,
 				6C97AD6B1D96D70B00DAAB8D /* CloudKitManager.swift */,
-				6C97AD6D1D96DE2E00DAAB8D /* CloudKitHelper.swift */,
+				6CA40CF71D9E396F00A2AF80 /* CloudKitHelper.swift */,
 			);
 			name = CloudKit;
 			sourceTree = "<group>";
@@ -213,7 +206,7 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		6CFD29AC1D8E48A6001E341E /* Interface Builder */ = {
+		6C97ADB11D9B809000DAAB8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				6C5CF2911D8DB59D00586027 /* LaunchScreen.storyboard */,
@@ -223,8 +216,10 @@
 				6C735CF91D938D6500BA12DF /* SlipsCollectionViewCell.xib */,
 				6C5CF30A1D8DDF6300586027 /* FriendsViewController.xib */,
 				6C97AD9C1D9A2D1C00DAAB8D /* ScanCollectionViewCell.xib */,
+				6C735CF71D938D4A00BA12DF /* SlipsCollectionViewCell.swift */,
+				6C97AD9B1D9A2D1C00DAAB8D /* ScanCollectionViewCell.swift */,
 			);
-			name = "Interface Builder";
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,16 +367,17 @@
 				6C5CF29F1D8DBC3400586027 /* MainViewController.swift in Sources */,
 				6C5CF3071D8DDF5500586027 /* CameraViewController.swift in Sources */,
 				6C5CF2891D8DB59D00586027 /* AppDelegate.swift in Sources */,
+				6CA40CF81D9E396F00A2AF80 /* CloudKitHelper.swift in Sources */,
 				6C97AD6A1D96526800DAAB8D /* ScannedMe.swift in Sources */,
 				6C97AD761D9888C600DAAB8D /* AddAccountsViewController.swift in Sources */,
 				6C97AD981D9A0AA900DAAB8D /* ScanDetailViewController.swift in Sources */,
+				6C97ADAF1D9B804800DAAB8D /* MapViewController.swift in Sources */,
 				6C735CF41D9386E400BA12DF /* SettingsTableViewController.swift in Sources */,
 				6C735CFC1D938E1000BA12DF /* SlipViewController.swift in Sources */,
 				6C735D051D93A43700BA12DF /* CloudKitAuthentication.swift in Sources */,
 				6C97AD9D1D9A2D1C00DAAB8D /* ScanCollectionViewCell.swift in Sources */,
 				6C735CFE1D9399FD00BA12DF /* ScannedMeTableViewController.swift in Sources */,
 				6C735D071D93AB2E00BA12DF /* User.swift in Sources */,
-				6C97AD6E1D96DE2E00DAAB8D /* CloudKitHelper.swift in Sources */,
 				6C97AD6C1D96D70B00DAAB8D /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AA8D072545953AD4CB10E73 /* Pods-slipcode-master.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "slipcode-master/slipcode-master.entitlements";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -520,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEE9DC1A4D8F80B915A756D4 /* Pods-slipcode-master.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "slipcode-master/slipcode-master.entitlements";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -9,9 +9,19 @@
 import Foundation
 import CloudKit
 
-class ScannedMe {
+class ScannedMe: NSObject, NSCoding {
     
-    var name: String?
+    var name: String = ""
+    var date: NSDate = NSDate()
     
+    required init?(coder aDecoder: NSCoder) {
+        self.name = aDecoder.decodeObject(forKey: "name") as! String
+        self.date = aDecoder.decodeObject(forKey: "date") as! NSDate
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.name, forKey: "name")
+        aCoder.encode(self.date, forKey: "date")
+    }
     
 }

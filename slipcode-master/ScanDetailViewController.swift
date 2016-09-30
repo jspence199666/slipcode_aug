@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MapKit
+//import MapKit
 
 class ScanDetailViewController: UIViewController {
 
@@ -32,7 +32,7 @@ class ScanDetailViewController: UIViewController {
     @IBOutlet weak var button6: UIButton!
     @IBOutlet weak var button7: UIButton!
     
-    @IBOutlet weak var map: MKMapView!
+    //@IBOutlet weak var map: MKMapView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,15 +41,23 @@ class ScanDetailViewController: UIViewController {
         self.bio.text = self.scan?.bio
         self.date.text = "Date"//self.scan!.date
         
-        var imageArr: [UIImageView] = [image1, image2, image3, image4, image5, image6]
-        var buttonArr: [UIButton] = [button1, button2, button3, button4, button5, button6, button7]
+        setupImages()
+        setupButtons()
+        setupMap()
         
+    }
+    
+    func setupImages() {
+        let imageArr: [UIImageView] = [image1, image2, image3, image4, image5, image6]
         var i = 0
         for image in self.scan!.pictures {
             imageArr[i].image = image
             i += 1
         }
-        
+    }
+    
+    func setupButtons() {
+        let buttonArr: [UIButton] = [button1, button2, button3, button4, button5, button6, button7]
         var h = 0
         for (key, _) in self.scan!.accounts {
             switch key {
@@ -83,12 +91,13 @@ class ScanDetailViewController: UIViewController {
             }
             h += 1
         }
-        
-        
-        // setup map
-        
-        
     }
+    
+    func setupMap() {
+        //TODO: - Setup Map
+    }
+    
+    //MARK: - add Button Actions
     
     func addFB() {
         for (x, y) in self.scan!.accounts {
@@ -124,13 +133,6 @@ class ScanDetailViewController: UIViewController {
                 UIApplication.shared.openURL(URL(string: "http://www.linkedin.com/in/\(y)")!)
             }
         }
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
     }
 
     

@@ -22,12 +22,8 @@ class AddAccountsViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        let connectedAccountsDict = user.accounts!
-        
+        let connectedAccountsDict = user.accounts
         self.connectedAccounts = getAccountsArr(connectedAccountsDict)
-        
         self.accountsTableView.allowsMultipleSelection = true
         
     }
@@ -47,7 +43,7 @@ class AddAccountsViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func save(_ sender: AnyObject) {
         
-        let userAccounts: [String: String] = user.accounts!
+        let userAccounts: [String: String] = user.accounts
         var userAccountsToAdd: [String: String] = [:]
         
         for (key, value) in userAccounts {

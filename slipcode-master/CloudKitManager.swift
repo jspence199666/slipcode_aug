@@ -8,103 +8,84 @@
 
 import Foundation
 import CloudKit
+import UIKit
 
 class CloudKitManager {
     
-    let container = CKContainer.default()
-    
-    func getUserID() -> CKRecordID? {
-        
-        var userID: CKRecordID?
-        
-        container.fetchUserRecordID {
-            (recordID, error) in
-            if error == nil {
-                userID = recordID
-                
-            }
-        }
-        
-        return userID
-        
-    }
+    let user = User.sharedInstance
+    let helper = CloudKitHelper()
     
     
-    func loadSlipRecords() -> [Slip]? {
-        
-        let userID = getUserID()
-        var slipsArr: [Slip]?
-        
-        if let recordID = userID {
-            let predicate = NSPredicate(format: "creatorUserRecordID == %@", recordID)
-            let query = CKQuery(recordType: "Slips", predicate: predicate)
-            
-            container.publicCloudDatabase.perform(query, inZoneWith: nil) {
-                (records, error) in
-                if error != nil {
-                    // TODO: - Error handling
-                } else {
-                    if records != nil {
-                        slipsArr = LoadSlipsHelper().convertToSlips(records!)
-                    } else {
-                        // User has not made any slips yet
-                    }
-                }
-            }
-
-        } else {
-            // user has not logged in yet
-        }
-        
-        
-        return slipsArr
-        
-        
-    }
-    
-    
-    static func saveNewSlip(_ slip: Slip, completionHandler: @escaping (String) -> ()) {
-        
-        let record: CKRecord = CKRecord(recordType: "Slip")
-        record["accounts"] = SaveSlipsHelper().convertToArr(slip.accounts) as CKRecordValue?
+    func saveSlip(slip: Slip, completionHandler: @escaping (_ recordId: CKRecordID) -> () ) {
+        let record = CKRecord(recordType: "Slip")
+        record["name"] = slip.nameOfUser as CKRecordValue?
         record["bio"] = slip.bio as CKRecordValue?
-        record["nameOfOwner"] = slip.nameOfUser as CKRecordValue?
-        record["pictures"] = SaveSlipsHelper().convertToAsset(slip.pictures) as CKRecordValue?
+        record["accounts"] = helper.convertDictToArr(dict: slip.accounts) as CKRecordValue?
+        record["pictures"] = helper.convertUIImagesToAssets(images: slip.pictures) as CKRecordValue?
         
         CKContainer.default().publicCloudDatabase.save(record) {
             (record, error) in
             if error != nil {
-                // TODO: - Error Handling
+                print(error?.localizedDescription)
             } else {
                 if record != nil {
-                    print("returning record id")
-                    completionHandler(record!.recordID.recordName)
+                    print("saved slip to iCloud")
+                    completionHandler(record!.recordID)
+                }
+            }
+        }
+    }
+    
+    func removeSlip(slip: Slip) {
+        let recordId = slip.recordId!
+        
+        CKContainer.default().publicCloudDatabase.delete(withRecordID: recordId) {
+            (deletedId, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                print("deleted slip")
+            }
+        }
+        
+    }
+    
+    func fetchSlipFromScan(scanResult: String, completionHandler: @escaping (_ record: CKRecord) -> ()) {
+        let recordId = CKRecordID(recordName: scanResult)
+        
+        print("fetching slip from scan result")
+        
+        CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordId) {
+            (record, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                if record != nil {
+                    print("found slip")
+                    completionHandler(record!)
                 }
             }
         }
         
     }
     
-    
-    func loadScanRecords() -> [Scan]? {
+    func getScan(scanResult: String, completionHandler: @escaping (_ scan: Scan) -> ()) {
         
-        let predicate = NSPredicate(value: true)
-        let query = CKQuery(recordType: "Scans", predicate: predicate)
-        
-        CKContainer.default().privateCloudDatabase.perform(query, inZoneWith: nil) {
-            (records, error) in
-            if error != nil {
-                print(error?.localizedDescription)
-            } else {
-                if records != nil {
-                    
-                    // convert record to scan and return
-                    
-                }
-            }
+        self.fetchSlipFromScan(scanResult: scanResult) {
+            (record) in
+            
+            let newScan = Scan()
+            
+            newScan.accounts = self.helper.convertArrToDict(arr: record["accounts"] as! [String])
+            newScan.bio = record["bio"] as! String
+            newScan.name = record["name"] as! String
+            newScan.pictures = self.helper.convertAssetToUIImage(assets: record["pictures"] as? [CKAsset])
+            
+            newScan.location = CLLocation()
+            newScan.date = Date()
+            
+            completionHandler(newScan)
         }
-        return nil
-        
     }
     
     
