@@ -13,6 +13,7 @@ class SettingsTableViewController: UITableViewController {
     
     var user = User.sharedInstance
     var handler = HandleUser()
+    var indices: [Int] = []
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var facebookField: UITextField!
@@ -24,7 +25,6 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var emailField: UITextField!
     
     var fieldArr: [UITextField]?
-    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -78,6 +78,37 @@ class SettingsTableViewController: UITableViewController {
         }
         
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func indicesForAccessoryView() -> [Int] {
+        var arr: [Int] = []
+        
+        for field in fieldArr! {
+            if field.text != "" {
+                arr.append((fieldArr?.index(of: field))!)
+            }
+        }
+        for i in arr {print("index is filled: \(i)")}
+        return arr
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            indices = indicesForAccessoryView()
+        }
+        
+        for index in indices {
+            
+            print("index path: \(indexPath.row). Field Index: \(index)")
+            
+            if (indexPath.row == (index + 2)) || (indexPath.row == 1 && indices.contains(1)) {
+                cell.accessoryType = .checkmark
+                break
+            }
+        }
+        
+        
     }
     
 }

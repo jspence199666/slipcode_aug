@@ -9,15 +9,22 @@
 import UIKit
 import CloudKit
 import AVFoundation
+import CoreGraphics
 
 class MainViewController: UIViewController {
     
     
+    @IBOutlet weak var tabBar: UITabBar!
+    
     @IBOutlet weak var mainScrollView: UIScrollView!
+    
+    var profileViewFrame: CGRect?
+    var cameraViewFrame: CGRect?
+    var friendsViewFrame: CGRect?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mainScrollView.delegate = self
         setupScrollView()
     }
     
@@ -28,18 +35,30 @@ class MainViewController: UIViewController {
         let cameraView: CameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
         let friendsView: FriendsViewController = FriendsViewController(nibName: "FriendsViewController", bundle: nil)
         
-        let subViews = [cameraView, profileView, friendsView]
+        self.addChildViewController(profileView)
+        self.mainScrollView.addSubview(profileView.view)
+        profileView.didMove(toParentViewController: self)
         
-        for subView in subViews {
-            self.addChildViewController(subView)
-            self.mainScrollView.addSubview(subView.view)
-            subView.didMove(toParentViewController: self)
-            
-            var viewFrame: CGRect = subView.view.frame
-            viewFrame.origin.x = self.view.frame.width * CGFloat(subViews.index(of: subView)!.hashValue)
-            subView.view.frame = viewFrame
-            
-        }
+        self.profileViewFrame = profileView.view.frame
+        profileViewFrame!.origin.x = self.view.frame.width * CGFloat(1)
+        profileView.view.frame = profileViewFrame!
+        
+        self.addChildViewController(cameraView)
+        self.mainScrollView.addSubview(cameraView.view)
+        cameraView.didMove(toParentViewController: self)
+        
+        self.cameraViewFrame = cameraView.view.frame
+        cameraViewFrame!.origin.x = self.view.frame.width * CGFloat(2)
+        cameraView.view.frame = cameraViewFrame!
+        
+        self.addChildViewController(friendsView)
+        self.mainScrollView.addSubview(friendsView.view)
+        friendsView.didMove(toParentViewController: self)
+        
+        self.friendsViewFrame = friendsView.view.frame
+        friendsViewFrame!.origin.x = self.view.frame.width * CGFloat(0)
+        friendsView.view.frame = friendsViewFrame!
+        
         
         self.mainScrollView.contentSize = CGSize(width: self.view.frame.width * 3, height: self.view.frame.height)
         let offsetX: CGFloat = self.mainScrollView.contentSize.width / 3
@@ -49,6 +68,25 @@ class MainViewController: UIViewController {
     }
     
 
-    
+}
 
+extension MainViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scroll view did scroll")
+        if scrollView.bounds.intersects(cameraViewFrame!) {
+            print("camera view loaded")
+            self.tabBar.selectedItem = self.tabBar.items![2]
+        } else if scrollView.bounds.intersects(profileViewFrame!) {
+            print("profile view loaded")
+            self.tabBar.selectedItem = self.tabBar.items![1]
+        } else if scrollView.bounds.intersects(friendsViewFrame!) {
+            print("friends view loaded")
+            self.tabBar.selectedItem = self.tabBar.items![0]
+        }
+        
+        
+        
+    }
+    
 }

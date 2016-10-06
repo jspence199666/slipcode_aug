@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import SwiftQRCode
 import CloudKit
+import SimpleAlert
 
 class CameraViewController: UIViewController {
     
@@ -19,12 +20,18 @@ class CameraViewController: UIViewController {
     let scanner = QRCode()
     let ckmanager = CloudKitManager()
     
+    var scanDetailViewController: ScanDetailViewController?
+    
     @IBOutlet weak var cameraView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        scanDetailViewController = storyboard.instantiateViewController(withIdentifier: "ScanDetailViewController") as? ScanDetailViewController
         
         scanner.prepareScan(cameraView) { stringValue -> () in
+            
+            print(stringValue)
             self.getRecord(scanResults: stringValue)
         }
         scanner.scanFrame = cameraView.bounds
@@ -33,6 +40,7 @@ class CameraViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+       
         // start scan
         scanner.startScan()
     }
@@ -40,27 +48,43 @@ class CameraViewController: UIViewController {
     //MARK: - Cloudkit Methods
     
     func getRecord(scanResults: String) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        ckmanager.getScan(scanResult: scanResults) {
-            (scan) in
+        DispatchQueue.main.async {
             
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            let alertController = UIAlertController(title: "Fetching User...", message:
+                "", preferredStyle: UIAlertControllerStyle.alert)
             
-            self.user.scans.append(scan)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "ScanDetailViewController") as! ScanDetailViewController
-            viewController.scan = scan
-            self.present(viewController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
             
-            self.handler.save(completionHandler: { (success) in
-                if success {
-                    
-                }
-            })
-            
-            
-        }
+            self.ckmanager.getScan(scanResult: scanResults) {
+                (scan) in
+                
+                alertController.dismiss(animated: true, completion: nil)
+                
+                let date = Date()
+                let calendar = Calendar.current
+                let year = calendar.component(.year, from: date)
+                let month = calendar.component(.month, from: date)
+                let day = calendar.component(.day, from: date)
+                
+                print("year: \(year) month: \(month) day: \(day)")
+                
+                scan.date = date
+                
+                self.user.scans.append(scan)
+                self.scanDetailViewController!.scan = scan
+                self.present(self.scanDetailViewController!, animated: true, completion: nil)
+                
+                self.handler.save(completionHandler: { (success) in
+                    if success {
+                        
+                    }
+                })
+                
+                
+            }
 
+        }
+        
     }
 }
 

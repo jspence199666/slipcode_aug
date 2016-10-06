@@ -46,11 +46,20 @@ class CloudKitHelper {
         }
         
         for asset in ckassets {
-            let newImage = UIImage(contentsOfFile: asset.fileURL.absoluteString)
-            
-            if newImage != nil {
-                newImageArr.append(newImage!)
+            do {
+                let data = try Data(contentsOf: asset.fileURL)
+                let newImage = UIImage(data: data)
+                
+                if newImage != nil {
+                    newImageArr.append(newImage!)
+                } else {
+                    print("url is nil")
+                }
+                
+            } catch {
+                print(error.localizedDescription)
             }
+            
         }
         return newImageArr
     }

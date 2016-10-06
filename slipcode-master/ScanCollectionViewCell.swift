@@ -11,14 +11,19 @@ import UIKit
 class ScanCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    
-    var scan: Scan?
+    @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        nameLabel.text = scan?.name
-        
+    }
+    
+    func setupCell(scan: Scan) {
+        let hbounds = nameLabel.frame.height
+        print(hbounds)
+        print(scan.name)
+        nameLabel.text = scan.name
+        imageView.image = scan.pictures[0]
     }
 
 }

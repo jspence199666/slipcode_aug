@@ -17,7 +17,7 @@ class Slip: NSObject, NSCoding {
     var pictures: [UIImage] = []
     var scannedMe: [ScannedMe] = []
     var nameOfUser: String = ""
-    var recordId: CKRecordID?
+    var recordId: CKRecordID = CKRecordID(recordName: "nil") { didSet { print("changing to    " + self.recordId.recordName) }}
     
     override init() {}
     
@@ -36,18 +36,15 @@ class Slip: NSObject, NSCoding {
         aCoder.encode(self.pictures, forKey: "pictures")
         aCoder.encode(self.scannedMe, forKey: "scannedMe")
         aCoder.encode(self.nameOfUser, forKey: "name")
-        aCoder.encode(self.recordId?.recordName, forKey: "recordId")
+        aCoder.encode(self.recordId.recordName, forKey: "recordId")
     }
     
-    func createQRCode(completionHandler: (_ image: CIImage) -> ()) {
+    static func createQRCode(recordId: CKRecordID, completionHandler: (_ image: CIImage) -> ()) {
         var newFilter: CIImage?
-        let recordName = recordId?.recordName
+        let recordName = recordId.recordName
+        print("       " + recordName)
         
-        guard let stringForCode = recordName else {
-            return
-        }
-        
-        let dataForQRCode = (stringForCode)
+        let dataForQRCode = (recordName)
         let data = dataForQRCode.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
         let filter = CIFilter(name: "CIQRCodeGenerator")
         

@@ -2,104 +2,144 @@
 //  AddAccountsViewController.swift
 //  slipcode-master
 //
-//  Created by Jeremy Spence on 9/25/16.
+//  Created by Jeremy Spence on 10/4/16.
 //  Copyright © 2016 Jeremy Spence. All rights reserved.
 //
 
 import UIKit
 
-
-class AddAccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    var user = User.sharedInstance
-    var connectedAccounts: [String] = []
-    var accountsToAdd: [String] = []
-    var slip: Slip?
+class AddAccountsViewController: UIViewController {
     
-    @IBOutlet weak var accountsTableView: UITableView!
+    let user = User.sharedInstance
+    var activeAccounts: [String] = []
+    var accountsToAdd: [String] = []
+    
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button6: UIButton!
+    @IBOutlet weak var button7: UIButton!
+
+    @IBOutlet weak var check1: UIImageView!
+    @IBOutlet weak var check2: UIImageView!
+    @IBOutlet weak var check3: UIImageView!
+    @IBOutlet weak var check4: UIImageView!
+    @IBOutlet weak var check5: UIImageView!
+    @IBOutlet weak var check6: UIImageView!
+    @IBOutlet weak var check7: UIImageView!
+    
+    var buttonsArr: [UIButton] = []
+    var checkArr: [UIImageView] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let connectedAccountsDict = user.accounts
-        self.connectedAccounts = getAccountsArr(connectedAccountsDict)
-        self.accountsTableView.allowsMultipleSelection = true
+        buttonsArr = [button1, button2, button3, button4, button5, button6, button7]
+        checkArr = [check1, check2, check3, check4, check5, check6, check7]
         
-    }
-    
-    fileprivate func getAccountsArr(_ accountsDict: [String: String]) -> [String] {
-        
-        var accountsArr: [String] = []
-        
-        for (key, value) in accountsDict {
-            if key != "" {
-                if value != "" {accountsArr.append(key)}
+        for (key, value) in user.accounts {
+            if value != "" {
+                activeAccounts.append(key)
             }
         }
-        return accountsArr
+        
+        print("active accounts: \(activeAccounts.count)")
+        
+                
+        for button in buttonsArr {
+            if buttonsArr.index(of: button)! >= activeAccounts.count { button.isHidden = true }
+        }
+        
+        var x = 0
+        for account in activeAccounts {
+            
+            let button = buttonsArr[x]
+            
+            switch account {
+            case "facebook":
+                button.setImage(#imageLiteral(resourceName: "facebook100"), for: .normal)
+            case "twitter":
+                button.setImage(#imageLiteral(resourceName: "twitter100"), for: .normal)
+            case "instagram":
+                button.setImage(#imageLiteral(resourceName: "Instagram100"), for: .normal)
+            case "linkedin":
+                button.setImage(#imageLiteral(resourceName: "linkedin100"), for: .normal)
+            case "snapchat":
+                button.setImage(#imageLiteral(resourceName: "snapchat100"), for: .normal)
+            case "phone":
+                button.setImage(#imageLiteral(resourceName: "phone100"), for: .normal)
+            case "email":
+                button.setImage(#imageLiteral(resourceName: "mail100"), for: .normal)
+            default: break
+            }
+            x = x + 1
+        }
+        
+        accountButtonSetActions()
+
     }
     
+    func accountButtonSetActions() {
+        for account in self.buttonsArr {
+            account.addTarget(self, action: #selector(accountAction(sender:)), for: .touchUpInside)
+        }
+        
+    }
     
-    @IBAction func save(_ sender: AnyObject) {
+    func accountAction(sender: UIButton) {
         
-        let userAccounts: [String: String] = user.accounts
-        var userAccountsToAdd: [String: String] = [:]
-        
-        for (key, value) in userAccounts {
-            for account in accountsToAdd {
-                if key == account {
-                    userAccountsToAdd[key] = value
-                }
+        if checkArr[buttonsArr.index(of: sender)!].isHidden {
+            var account: String = ""
+            
+            switch sender {
+            case button1: account = activeAccounts[0]; checkArr[0].isHidden = false;
+            case button2: account = activeAccounts[1]; checkArr[1].isHidden = false;
+            case button3: account = activeAccounts[2]; checkArr[2].isHidden = false;
+            case button4: account = activeAccounts[3]; checkArr[3].isHidden = false;
+            case button5: account = activeAccounts[4]; checkArr[4].isHidden = false;
+            case button6: account = activeAccounts[5]; checkArr[5].isHidden = false;
+            case button7: account = activeAccounts[6]; checkArr[6].isHidden = false;
+            default: break
+            }
+            print(account)
+            accountsToAdd.append(account)
+
+        } else {
+            var account: String = ""
+            
+            switch sender {
+            case button1: account = activeAccounts[0]; checkArr[0].isHidden = true;
+            case button2: account = activeAccounts[1]; checkArr[1].isHidden = true;
+            case button3: account = activeAccounts[2]; checkArr[2].isHidden = true;
+            case button4: account = activeAccounts[3]; checkArr[3].isHidden = true;
+            case button5: account = activeAccounts[4]; checkArr[4].isHidden = true;
+            case button6: account = activeAccounts[5]; checkArr[5].isHidden = true;
+            case button7: account = activeAccounts[6]; checkArr[6].isHidden = true;
+            default: break
             }
             
+            print(account)
+            self.accountsToAdd = accountsToAdd.filter() { $0 != account }
+            
         }
-        
-        slip?.accounts = userAccountsToAdd
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func close(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return connectedAccounts.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Account", for: indexPath)
-        cell.selectionStyle = .none
-        print("setting up \(connectedAccounts[indexPath.row])")
-        cell.textLabel!.text = connectedAccounts[indexPath.row]
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType .checkmark
-        
-        accountsToAdd.append(connectedAccounts[indexPath.row])
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType .none
-        
-        self.accountsToAdd = self.accountsToAdd.filter {$0 != connectedAccounts[indexPath.row]}
-    }
-    
-    
-    
-    
-    
-    
 
+        
+        
+    }
+    
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+

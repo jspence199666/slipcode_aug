@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SimpleAlert.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftQRCode.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>895FFE470082941A1485B0456EDF8F74</key>
+		<key>0FD0F54B81ACF01173E097F5FA3C4B10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9376B22A057DCD1128ECC8E88D7C8D9B</key>
+		<key>3AD7A185031916BE2D7A3D51AAD4CE5E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA8F5C900E06456887DE16879B68676</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -3,5 +3,6 @@ use_frameworks!
 
 target 'slipcode-master' do
     pod 'SwiftQRCode'
+    pod 'SimpleAlert'
 
 end

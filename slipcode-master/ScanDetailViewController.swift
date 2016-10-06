@@ -13,12 +13,9 @@ class ScanDetailViewController: UIViewController {
 
     var scan: Scan?
     
-    @IBOutlet weak var image1: UIImageView!
-    @IBOutlet weak var image2: UIImageView!
-    @IBOutlet weak var image3: UIImageView!
-    @IBOutlet weak var image4: UIImageView!
-    @IBOutlet weak var image5: UIImageView!
-    @IBOutlet weak var image6: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var outlineView: UIView!
     
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var bio: UILabel!
@@ -34,27 +31,33 @@ class ScanDetailViewController: UIViewController {
     
     //@IBOutlet weak var map: MKMapView!
     
+    override func viewDidLoad() {
+        outlineView.layer.cornerRadius = 5.0
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.fullName.text = self.scan?.name
         self.bio.text = self.scan?.bio
-        self.date.text = "Date"//self.scan!.date
+        print("PICTURES: \(self.scan?.pictures.count)")
         
-        setupImages()
+        let date = self.scan?.date
+        if date != nil {
+            let calendar = Calendar.current
+            let year = calendar.component(.year, from: date!)
+            let month = calendar.component(.month, from: date!)
+            let day = calendar.component(.day, from: date!)
+            self.date.text = "\(month) \(day), \(year)"
+        }
+        
+        
         setupButtons()
         setupMap()
         
     }
     
-    func setupImages() {
-        let imageArr: [UIImageView] = [image1, image2, image3, image4, image5, image6]
-        var i = 0
-        for image in self.scan!.pictures {
-            imageArr[i].image = image
-            i += 1
-        }
-    }
+
     
     func setupButtons() {
         let buttonArr: [UIButton] = [button1, button2, button3, button4, button5, button6, button7]
@@ -63,30 +66,30 @@ class ScanDetailViewController: UIViewController {
             switch key {
             case "facebook":
                 buttonArr[h].isHidden = false
-                buttonArr[h].titleLabel?.text = "fb"
+                buttonArr[h].setImage(#imageLiteral(resourceName: "facebook150"), for: .normal)
                 buttonArr[h].addTarget(self, action: #selector(addFB), for: .touchUpInside)
             case "twitter":
                 buttonArr[h].isHidden = false
-                buttonArr[h].titleLabel?.text = "tw"
+                buttonArr[h].setImage(#imageLiteral(resourceName: "twitter150"), for: .normal)
                 buttonArr[h].addTarget(self, action: #selector(addTW), for: .touchUpInside)
             case "instagram":
                 buttonArr[h].isHidden = false
-                buttonArr[h].titleLabel?.text = "ig"
+                buttonArr[h].setImage(#imageLiteral(resourceName: "Instagram150"), for: .normal)
                 buttonArr[h].addTarget(self, action: #selector(addSC), for: .touchUpInside)
             case "snapchat":
                 buttonArr[h].isHidden = false
-                buttonArr[h].titleLabel?.text = "sc"
+                buttonArr[h].setImage(#imageLiteral(resourceName: "snapchat150"), for: .normal)
                 buttonArr[h].addTarget(self, action: #selector(addIG), for: .touchUpInside)
             case "linkedin":
                 buttonArr[h].isHidden = false
-                buttonArr[h].titleLabel?.text = "li"
+                buttonArr[h].setImage(#imageLiteral(resourceName: "linkedin150"), for: .normal)
                 buttonArr[h].addTarget(self, action: #selector(addLI), for: .touchUpInside)
             case "phone":
                 buttonArr[h].isHidden = false
-                buttonArr[h].titleLabel?.text = "ph"
+                buttonArr[h].setImage(#imageLiteral(resourceName: "phone150"), for: .normal)
             case "email":
                 buttonArr[h].isHidden = false
-                buttonArr[h].titleLabel?.text = "em"
+                buttonArr[h].setImage(#imageLiteral(resourceName: "mail150"), for: .normal)
             default: break
             }
             h += 1
@@ -142,4 +145,30 @@ class ScanDetailViewController: UIViewController {
     
 
 
+}
+
+extension ScanDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.scan!.pictures.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pic", for: indexPath) as! PictureCollectionViewCell
+        
+        cell.imageView.image = self.scan!.pictures[indexPath.row]
+        return cell
+    }
+    
+}
+
+class PictureCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
 }

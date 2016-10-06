@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAccountsViewController" customModule="slipcode_master" customModuleProvider="target">
+            <connections>
+                <outlet property="button1" destination="VI8-cB-FkD" id="lJM-u6-hkt"/>
+                <outlet property="button2" destination="uLD-Fq-eZg" id="aOY-FW-3GO"/>
+                <outlet property="button3" destination="m1b-mC-wZq" id="n38-Ly-SLB"/>
+                <outlet property="button4" destination="qW1-gd-QQ3" id="9Sk-fe-uWB"/>
+                <outlet property="button5" destination="lrL-A8-7pK" id="ioq-vP-NRl"/>
+                <outlet property="button6" destination="4T4-kf-31p" id="gVf-0r-CGs"/>
+                <outlet property="button7" destination="zsb-rS-JXh" id="8hE-ai-DiO"/>
+                <outlet property="check1" destination="GOe-ZV-DIC" id="KME-nD-OzT"/>
+                <outlet property="check2" destination="dPb-zO-H6b" id="GKM-hC-E0q"/>
+                <outlet property="check3" destination="1tU-4V-H5I" id="45u-cv-JMO"/>
+                <outlet property="check4" destination="rtu-Dv-2iN" id="EOV-h7-N0Z"/>
+                <outlet property="check5" destination="Kl9-F8-gwQ" id="Blf-IC-dww"/>
+                <outlet property="check6" destination="B73-oZ-lCi" id="Mfh-Mz-AGz"/>
+                <outlet property="check7" destination="emy-fh-nfW" id="WFw-1Q-Gq1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBA-XN-xOl">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VI8-cB-FkD">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="DtE-aQ-dez"/>
+                                <constraint firstAttribute="height" constant="50" id="Sfd-Pf-j9R"/>
+                            </constraints>
+                            <state key="normal" image="addAccount"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLD-Fq-eZg">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="dub-fU-3uG"/>
+                                <constraint firstAttribute="height" constant="50" id="jNk-O3-WIg"/>
+                            </constraints>
+                            <state key="normal" image="addAccount"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1b-mC-wZq">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="7LP-ed-2CK"/>
+                                <constraint firstAttribute="width" constant="50" id="eV6-Ev-sIf"/>
+                            </constraints>
+                            <state key="normal" image="addAccount"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW1-gd-QQ3">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="IB2-tz-k1K"/>
+                                <constraint firstAttribute="height" constant="50" id="oNm-Mm-WS3"/>
+                            </constraints>
+                            <state key="normal" image="addAccount"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrL-A8-7pK">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="81V-HY-vVf"/>
+                                <constraint firstAttribute="width" constant="50" id="Rxt-DN-8Qe"/>
+                            </constraints>
+                            <state key="normal" image="addAccount"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-kf-31p">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Xqf-o7-4w1"/>
+                                <constraint firstAttribute="width" constant="50" id="abh-tC-mYV"/>
+                            </constraints>
+                            <state key="normal" image="addAccount"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsb-rS-JXh">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="HdM-im-oI4"/>
+                                <constraint firstAttribute="height" constant="50" id="vb7-8f-Rpp"/>
+                            </constraints>
+                            <state key="normal" image="addAccount"/>
+                        </button>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smallSave" translatesAutoresizingMaskIntoConstraints="NO" id="GOe-ZV-DIC">
+                            <rect key="frame" x="48" y="8" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smallSave" translatesAutoresizingMaskIntoConstraints="NO" id="dPb-zO-H6b">
+                            <rect key="frame" x="113" y="8" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smallSave" translatesAutoresizingMaskIntoConstraints="NO" id="1tU-4V-H5I">
+                            <rect key="frame" x="178" y="8" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smallSave" translatesAutoresizingMaskIntoConstraints="NO" id="rtu-Dv-2iN">
+                            <rect key="frame" x="243" y="8" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smallSave" translatesAutoresizingMaskIntoConstraints="NO" id="Kl9-F8-gwQ">
+                            <rect key="frame" x="308" y="8" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smallSave" translatesAutoresizingMaskIntoConstraints="NO" id="B73-oZ-lCi">
+                            <rect key="frame" x="373" y="8" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smallSave" translatesAutoresizingMaskIntoConstraints="NO" id="emy-fh-nfW">
+                            <rect key="frame" x="431" y="8" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="VI8-cB-FkD" secondAttribute="bottom" constant="25" id="0TI-jL-kd6"/>
+                        <constraint firstItem="4T4-kf-31p" firstAttribute="leading" secondItem="lrL-A8-7pK" secondAttribute="trailing" constant="15" id="1Gr-pX-5jU"/>
+                        <constraint firstAttribute="bottom" secondItem="qW1-gd-QQ3" secondAttribute="bottom" constant="25" id="1k3-L3-Gb4"/>
+                        <constraint firstItem="qW1-gd-QQ3" firstAttribute="top" secondItem="lBA-XN-xOl" secondAttribute="top" constant="25" id="7PM-ZS-1qf"/>
+                        <constraint firstItem="m1b-mC-wZq" firstAttribute="leading" secondItem="uLD-Fq-eZg" secondAttribute="trailing" constant="15" id="EL8-Ey-zZG"/>
+                        <constraint firstItem="uLD-Fq-eZg" firstAttribute="top" secondItem="lBA-XN-xOl" secondAttribute="top" constant="25" id="EL9-gI-OlT"/>
+                        <constraint firstAttribute="bottom" secondItem="zsb-rS-JXh" secondAttribute="bottom" constant="25" id="NJd-us-btJ"/>
+                        <constraint firstItem="4T4-kf-31p" firstAttribute="top" secondItem="lBA-XN-xOl" secondAttribute="top" constant="25" id="QKg-hl-Qne"/>
+                        <constraint firstAttribute="bottom" secondItem="4T4-kf-31p" secondAttribute="bottom" constant="25" id="SaT-bP-eM0"/>
+                        <constraint firstAttribute="bottom" secondItem="uLD-Fq-eZg" secondAttribute="bottom" constant="25" id="Sgi-GI-EPO"/>
+                        <constraint firstItem="uLD-Fq-eZg" firstAttribute="leading" secondItem="VI8-cB-FkD" secondAttribute="trailing" constant="20" id="e5L-9Q-eKD"/>
+                        <constraint firstItem="VI8-cB-FkD" firstAttribute="top" secondItem="lBA-XN-xOl" secondAttribute="top" constant="25" id="fec-mc-IMb"/>
+                        <constraint firstItem="qW1-gd-QQ3" firstAttribute="leading" secondItem="m1b-mC-wZq" secondAttribute="trailing" constant="15" id="hGJ-7r-Re8"/>
+                        <constraint firstItem="m1b-mC-wZq" firstAttribute="top" secondItem="lBA-XN-xOl" secondAttribute="top" constant="25" id="i1M-PE-qqY"/>
+                        <constraint firstItem="zsb-rS-JXh" firstAttribute="leading" secondItem="4T4-kf-31p" secondAttribute="trailing" constant="15" id="ijw-J6-7aP"/>
+                        <constraint firstItem="VI8-cB-FkD" firstAttribute="leading" secondItem="lBA-XN-xOl" secondAttribute="leading" constant="21" id="kLO-ri-5Mj"/>
+                        <constraint firstItem="lrL-A8-7pK" firstAttribute="leading" secondItem="qW1-gd-QQ3" secondAttribute="trailing" constant="15" id="mGa-dM-o0d"/>
+                        <constraint firstAttribute="bottom" secondItem="m1b-mC-wZq" secondAttribute="bottom" constant="25" id="pGU-Wu-Jal"/>
+                        <constraint firstAttribute="trailing" secondItem="zsb-rS-JXh" secondAttribute="trailing" constant="34" id="try-4F-SzD"/>
+                        <constraint firstAttribute="bottom" secondItem="lrL-A8-7pK" secondAttribute="bottom" constant="25" id="wfc-PX-lYS"/>
+                        <constraint firstItem="lrL-A8-7pK" firstAttribute="top" secondItem="lBA-XN-xOl" secondAttribute="top" constant="25" id="x7P-uj-tTQ"/>
+                        <constraint firstItem="zsb-rS-JXh" firstAttribute="top" secondItem="lBA-XN-xOl" secondAttribute="top" constant="25" id="yCH-Ed-Xqa"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lBA-XN-xOl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PVJ-tl-q2d"/>
+                <constraint firstAttribute="trailing" secondItem="lBA-XN-xOl" secondAttribute="trailing" id="WNX-6T-6nQ"/>
+                <constraint firstItem="lBA-XN-xOl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ib3-wI-95y"/>
+                <constraint firstAttribute="bottom" secondItem="lBA-XN-xOl" secondAttribute="bottom" id="kCE-Ci-OjM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-194" y="-9"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addAccount" width="50" height="50"/>
+        <image name="smallSave" width="20" height="20"/>
+    </resources>
+</document>

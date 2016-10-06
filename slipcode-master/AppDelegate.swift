@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  slipcode-master
 //
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let handler = HandleUser()
         var isFirstOpen = true
         
-        if UserDefaults.standard.bool(forKey: "LoggedInStatus") {
+        if  UserDefaults.standard.bool(forKey: "LoggedInStatus") {
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as UIViewController
             
             handler.load()

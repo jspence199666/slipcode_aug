@@ -22,19 +22,19 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="yyh-m4-8tr"/>
                     </constraints>
-                    <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.2666666667" green="0.2901960784" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                     <items>
                         <navigationItem id="nB2-O1-KYv">
-                            <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="CB2-tK-idl">
-                                <color key="tintColor" red="0.2666666667" green="0.2901960784" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <barButtonItem key="rightBarButtonItem" image="map" style="plain" id="CB2-tK-idl">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="991-xD-Kkf">
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.2666666667" green="0.2901960784" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="hyp-ko-qSe">
-                        <size key="itemSize" width="200" height="200"/>
+                        <size key="itemSize" width="200" height="400"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
@@ -45,17 +45,20 @@
                     </connections>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.2666666667" green="0.2901960784" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="PFP-S4-Rq9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="0Y9-Vr-ZME"/>
-                <constraint firstAttribute="bottom" secondItem="991-xD-Kkf" secondAttribute="bottom" constant="-10" id="5ow-ku-bUd"/>
+                <constraint firstAttribute="bottom" secondItem="991-xD-Kkf" secondAttribute="bottom" constant="1" id="5ow-ku-bUd"/>
                 <constraint firstItem="PFP-S4-Rq9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GIg-Rp-RCC"/>
                 <constraint firstAttribute="trailing" secondItem="PFP-S4-Rq9" secondAttribute="trailing" id="Ox1-vx-6iP"/>
                 <constraint firstItem="991-xD-Kkf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TfX-PE-NMR"/>
                 <constraint firstAttribute="trailing" secondItem="991-xD-Kkf" secondAttribute="trailing" id="rEO-zr-gUb"/>
-                <constraint firstItem="991-xD-Kkf" firstAttribute="top" secondItem="PFP-S4-Rq9" secondAttribute="bottom" constant="10" id="tvW-67-9Wv"/>
+                <constraint firstItem="991-xD-Kkf" firstAttribute="top" secondItem="PFP-S4-Rq9" secondAttribute="bottom" constant="37" id="tvW-67-9Wv"/>
             </constraints>
-            <point key="canvasLocation" x="326" y="-175"/>
+            <point key="canvasLocation" x="325.5" y="-175.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="map" width="25" height="25"/>
+    </resources>
 </document>

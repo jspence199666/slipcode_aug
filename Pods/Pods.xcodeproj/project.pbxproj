@@ -7,122 +7,174 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		096B31687AD96DA15FD5FD6CA33949EC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */; };
-		44EA7EC9D6501F397753B301931141D7 /* Pods-slipcode-master-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33891ADE94F3CEC124DB032E517BA66B /* Pods-slipcode-master-dummy.m */; };
-		462983B8DAFC1609D72FE9C35FC30F65 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4281E829073CF746CBBAE8232741 /* QRCode.swift */; };
-		9C35795734BEBF410AF30FA62F29DDA3 /* SwiftQRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 578CC23487A5CA7BD0E3EA67493C470D /* SwiftQRCode-dummy.m */; };
-		BAED292D8DE5CA3F2C3EDEEEA732085F /* SwiftQRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 518BD0CF2C6C1FCB030A31C5E9C78BD3 /* SwiftQRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C122FF95999FD65218FA07BDEF8FF44B /* Pods-slipcode-master-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68844A5DCF7D53F97E42EBD07D4BF607 /* Pods-slipcode-master-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F149E6DFF9717035FB234FE010553EC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */; };
-		F7AF8BD4270DBE7A061B4AC014C93E13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */; };
+		0210102D48456D154106F391EFE27CAE /* SwiftQRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 044C3392AD6FAC7FFCDD339F4CA4FAAB /* SwiftQRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03F7A73647CB452761C39534E8923910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5422916563B77A748D40B022EAE1747C /* Foundation.framework */; };
+		0434DE95220D94C0E3550A852640C8D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5422916563B77A748D40B022EAE1747C /* Foundation.framework */; };
+		099F619FBB552D87930B8C5A76606363 /* SimpleAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F1237AAF480DC22B27CB502A059B95 /* SimpleAlert-dummy.m */; };
+		0A8E1309872203253DFF428430DC55C4 /* Pods-slipcode-master-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68844A5DCF7D53F97E42EBD07D4BF607 /* Pods-slipcode-master-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2BB481712726FE32DB8A57667E7ECC /* SimpleAlert.xib in Sources */ = {isa = PBXBuildFile; fileRef = 6A8557A6F28797A90F76CB0634DEDEE1 /* SimpleAlert.xib */; };
+		262F5DCA66A6481BCBD10696C6C7883F /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33F783C331E9CEFD7653CE52B5DEA4B /* QRCode.swift */; };
+		5E349D0A9588DBE46337D94B4F1AC078 /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B91FF81FFED17AA821BAF522D50DF31 /* SimpleAlert.swift */; };
+		7455683DF09C03D538D2A38B2CC07351 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A41C04F9FB06B54E2A413E29A588B49 /* UIKit.framework */; };
+		7B5BC1B6080C6A3191EEAF4771C88E4D /* SwiftQRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BB9F91610EEE4AB22246CC6BF55CF7 /* SwiftQRCode-dummy.m */; };
+		B34222B903CCAF8EC618BC4F469DD375 /* SimpleAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = BC481FE99241FB88EB30F67BBD8E981E /* SimpleAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B60C3DFD63525CDE6C14F3DE46DC7BE5 /* Pods-slipcode-master-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33891ADE94F3CEC124DB032E517BA66B /* Pods-slipcode-master-dummy.m */; };
+		BFFA44615B951FC8407B328C5E6514BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5422916563B77A748D40B022EAE1747C /* Foundation.framework */; };
+		D4AADC024DDB50289D900DD5CF3BA6D9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADFC5A4B2BBCFD9A27B7A059658E773 /* AVFoundation.framework */; };
+		FBA6D954CFF71863ABA15959F5DF3231 /* SimpleAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D243171AAAF9DDFDF4A102D5F2E25E7 /* SimpleAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		689FAAE77AB9F7EFFFA34A73569F0924 /* PBXContainerItemProxy */ = {
+		20E2119E45EE90462CC213AA725E4BC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 895FFE470082941A1485B0456EDF8F74;
+			remoteGlobalIDString = 0FD0F54B81ACF01173E097F5FA3C4B10;
+			remoteInfo = SimpleAlert;
+		};
+		4C2B68A7A50C165EB105BF2AAFD5ADCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBA8F5C900E06456887DE16879B68676;
 			remoteInfo = SwiftQRCode;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044C3392AD6FAC7FFCDD339F4CA4FAAB /* SwiftQRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftQRCode-umbrella.h"; sourceTree = "<group>"; };
 		21773F4577D1B09958854BA2373836CC /* Pods-slipcode-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-slipcode-master.release.xcconfig"; sourceTree = "<group>"; };
-		283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		27AAFFC2E4B4BEE59145470ED9C18AC5 /* SimpleAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleAlert.xcconfig; sourceTree = "<group>"; };
+		28D6B601BD22259465A3451D375160EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29464EE05CBF9DAA5462D51DC477D58C /* SimpleAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SimpleAlert.modulemap; sourceTree = "<group>"; };
 		33891ADE94F3CEC124DB032E517BA66B /* Pods-slipcode-master-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-slipcode-master-dummy.m"; sourceTree = "<group>"; };
-		37FF732AFF79B7234EFDA94DFDC4C580 /* SwiftQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48A1228D035CB7BFC1765D8DDAD0C724 /* SwiftQRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftQRCode.modulemap; sourceTree = "<group>"; };
-		518BD0CF2C6C1FCB030A31C5E9C78BD3 /* SwiftQRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftQRCode-umbrella.h"; sourceTree = "<group>"; };
+		371169C4935600F9B062B44E7608BFBF /* SimpleAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A41C04F9FB06B54E2A413E29A588B49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3B91FF81FFED17AA821BAF522D50DF31 /* SimpleAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleAlert.swift; path = SimpleAlert/SimpleAlert.swift; sourceTree = "<group>"; };
+		47F1237AAF480DC22B27CB502A059B95 /* SimpleAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleAlert-dummy.m"; sourceTree = "<group>"; };
+		48CFFB57C7E79B02610DD205271AE88C /* SwiftQRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftQRCode.xcconfig; sourceTree = "<group>"; };
+		5422916563B77A748D40B022EAE1747C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		543493C333C6D47928E3BB0E6C94F8D0 /* Pods-slipcode-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-slipcode-master.debug.xcconfig"; sourceTree = "<group>"; };
-		578CC23487A5CA7BD0E3EA67493C470D /* SwiftQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftQRCode-dummy.m"; sourceTree = "<group>"; };
-		60520930FFC1D4A38AD12BC56F6F90F2 /* SwiftQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftQRCode-prefix.pch"; sourceTree = "<group>"; };
+		568609158835671B03AAECE969729331 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61EB06C33127856F1C24496A744E53B9 /* SwiftQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftQRCode-prefix.pch"; sourceTree = "<group>"; };
 		65C33E246554119A65DE06732A67115A /* Pods-slipcode-master-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-slipcode-master-frameworks.sh"; sourceTree = "<group>"; };
 		68844A5DCF7D53F97E42EBD07D4BF607 /* Pods-slipcode-master-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-slipcode-master-umbrella.h"; sourceTree = "<group>"; };
+		6A8557A6F28797A90F76CB0634DEDEE1 /* SimpleAlert.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SimpleAlert.xib; path = SimpleAlert/SimpleAlert.xib; sourceTree = "<group>"; };
+		6D243171AAAF9DDFDF4A102D5F2E25E7 /* SimpleAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleAlert-umbrella.h"; sourceTree = "<group>"; };
+		6D4B90E31FE4FA7A242D20F36C1018C6 /* SwiftQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		770972452BF318BDF2EE5733B5F4382B /* Pods-slipcode-master-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-slipcode-master-acknowledgements.plist"; sourceTree = "<group>"; };
+		80BB9F91610EEE4AB22246CC6BF55CF7 /* SwiftQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftQRCode-dummy.m"; sourceTree = "<group>"; };
 		823D583625052ED7F625E96AECB37847 /* Pods-slipcode-master.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-slipcode-master.modulemap"; sourceTree = "<group>"; };
 		917F3EDB7D9BD3111D372DF5FE339406 /* Pods-slipcode-master-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-slipcode-master-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9ADFC5A4B2BBCFD9A27B7A059658E773 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A33F783C331E9CEFD7653CE52B5DEA4B /* QRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCode.swift; path = QRCode/Source/QRCode.swift; sourceTree = "<group>"; };
+		A5A91FFC3DC6CC06AB803C5F611ADB6B /* SwiftQRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftQRCode.modulemap; sourceTree = "<group>"; };
 		AEF4496EDE1DD2EA07703B1127B2315B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB42C4487E26B671AC7DAC4392287558 /* Pods_slipcode_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_slipcode_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC481FE99241FB88EB30F67BBD8E981E /* SimpleAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimpleAlert.h; path = SimpleAlert/SimpleAlert.h; sourceTree = "<group>"; };
+		C1528F21667798660F4C117AAD062893 /* Pods_slipcode_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_slipcode_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39742D570005D87C9F8CC5B4D004145 /* Pods-slipcode-master-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-slipcode-master-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EF6F41D9B05A4D607CD6191BFE74949D /* SwiftQRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftQRCode.xcconfig; sourceTree = "<group>"; };
-		F88D4281E829073CF746CBBAE8232741 /* QRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCode.swift; path = QRCode/Source/QRCode.swift; sourceTree = "<group>"; };
-		FC4E447F8AAD03E04A259295DB70E219 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF378568BC3D7CE157409D3BBDAFDC2D /* SimpleAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleAlert-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5A2502C3F7595879494AEDA126BA89E7 /* Frameworks */ = {
+		2FF8AA3551ACE151324A9A86B2C137E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				096B31687AD96DA15FD5FD6CA33949EC /* AVFoundation.framework in Frameworks */,
-				F7AF8BD4270DBE7A061B4AC014C93E13 /* Foundation.framework in Frameworks */,
+				0434DE95220D94C0E3550A852640C8D2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A77413F4C0E3C54FEA65E0C93629DE6D /* Frameworks */ = {
+		349A270D9FE54026C5032AE8A1D17C26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F149E6DFF9717035FB234FE010553EC3 /* Foundation.framework in Frameworks */,
+				D4AADC024DDB50289D900DD5CF3BA6D9 /* AVFoundation.framework in Frameworks */,
+				BFFA44615B951FC8407B328C5E6514BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C41B5B7D1F69F98782840CA30DE092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F7A73647CB452761C39534E8923910 /* Foundation.framework in Frameworks */,
+				7455683DF09C03D538D2A38B2CC07351 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38FEFC485487EAB8DB1CE8907AA2C09E /* Pods */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C459AA804DF7B44CA620A95B86F7E69C /* SwiftQRCode */,
+				CA648648317C71E5A4DA455C8D2DBA8E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C1CC10B1FAF829133BAF75FF351C9CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A450CA95B4A9BB78783B6AD56585195 /* SimpleAlert */,
+				94884EB1AFC70FEC5D084D4A0D9C85CE /* SwiftQRCode */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		3593DC951888E95FCBC64C6EC0FB9DB1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A40AF8D79D4382828A0EEAD80AB26358 /* iOS */,
+				28D6B601BD22259465A3451D375160EC /* Info.plist */,
+				A5A91FFC3DC6CC06AB803C5F611ADB6B /* SwiftQRCode.modulemap */,
+				48CFFB57C7E79B02610DD205271AE88C /* SwiftQRCode.xcconfig */,
+				80BB9F91610EEE4AB22246CC6BF55CF7 /* SwiftQRCode-dummy.m */,
+				61EB06C33127856F1C24496A744E53B9 /* SwiftQRCode-prefix.pch */,
+				044C3392AD6FAC7FFCDD339F4CA4FAAB /* SwiftQRCode-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftQRCode";
+			sourceTree = "<group>";
+		};
+		5A450CA95B4A9BB78783B6AD56585195 /* SimpleAlert */ = {
+			isa = PBXGroup;
+			children = (
+				BC481FE99241FB88EB30F67BBD8E981E /* SimpleAlert.h */,
+				3B91FF81FFED17AA821BAF522D50DF31 /* SimpleAlert.swift */,
+				6A8557A6F28797A90F76CB0634DEDEE1 /* SimpleAlert.xib */,
+				F04962EB23EA48DE6CE921777484EE13 /* Support Files */,
+			);
+			path = SimpleAlert;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				38FEFC485487EAB8DB1CE8907AA2C09E /* Pods */,
-				C49EAC221D89E220A45F02B3C3A6C3DD /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				1C1CC10B1FAF829133BAF75FF351C9CC /* Pods */,
+				A10D8CD0E7A09C80ED5E0D5A3B1FFA95 /* Products */,
 				CD934D1C3D3960057B6F51BD5118655E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A40AF8D79D4382828A0EEAD80AB26358 /* iOS */ = {
+		94884EB1AFC70FEC5D084D4A0D9C85CE /* SwiftQRCode */ = {
 			isa = PBXGroup;
 			children = (
-				283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */,
-				96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C459AA804DF7B44CA620A95B86F7E69C /* SwiftQRCode */ = {
-			isa = PBXGroup;
-			children = (
-				F88D4281E829073CF746CBBAE8232741 /* QRCode.swift */,
-				F1DF646E08510CE2D4CEF916602A5886 /* Support Files */,
+				A33F783C331E9CEFD7653CE52B5DEA4B /* QRCode.swift */,
+				3593DC951888E95FCBC64C6EC0FB9DB1 /* Support Files */,
 			);
 			path = SwiftQRCode;
 			sourceTree = "<group>";
 		};
-		C49EAC221D89E220A45F02B3C3A6C3DD /* Products */ = {
+		A10D8CD0E7A09C80ED5E0D5A3B1FFA95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB42C4487E26B671AC7DAC4392287558 /* Pods_slipcode_master.framework */,
-				37FF732AFF79B7234EFDA94DFDC4C580 /* SwiftQRCode.framework */,
+				C1528F21667798660F4C117AAD062893 /* Pods_slipcode_master.framework */,
+				371169C4935600F9B062B44E7608BFBF /* SimpleAlert.framework */,
+				6D4B90E31FE4FA7A242D20F36C1018C6 /* SwiftQRCode.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +197,16 @@
 			path = "Target Support Files/Pods-slipcode-master";
 			sourceTree = "<group>";
 		};
+		CA648648317C71E5A4DA455C8D2DBA8E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9ADFC5A4B2BBCFD9A27B7A059658E773 /* AVFoundation.framework */,
+				5422916563B77A748D40B022EAE1747C /* Foundation.framework */,
+				3A41C04F9FB06B54E2A413E29A588B49 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		CD934D1C3D3960057B6F51BD5118655E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,49 +215,94 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F1DF646E08510CE2D4CEF916602A5886 /* Support Files */ = {
+		F04962EB23EA48DE6CE921777484EE13 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E447F8AAD03E04A259295DB70E219 /* Info.plist */,
-				48A1228D035CB7BFC1765D8DDAD0C724 /* SwiftQRCode.modulemap */,
-				EF6F41D9B05A4D607CD6191BFE74949D /* SwiftQRCode.xcconfig */,
-				578CC23487A5CA7BD0E3EA67493C470D /* SwiftQRCode-dummy.m */,
-				60520930FFC1D4A38AD12BC56F6F90F2 /* SwiftQRCode-prefix.pch */,
-				518BD0CF2C6C1FCB030A31C5E9C78BD3 /* SwiftQRCode-umbrella.h */,
+				568609158835671B03AAECE969729331 /* Info.plist */,
+				29464EE05CBF9DAA5462D51DC477D58C /* SimpleAlert.modulemap */,
+				27AAFFC2E4B4BEE59145470ED9C18AC5 /* SimpleAlert.xcconfig */,
+				47F1237AAF480DC22B27CB502A059B95 /* SimpleAlert-dummy.m */,
+				EF378568BC3D7CE157409D3BBDAFDC2D /* SimpleAlert-prefix.pch */,
+				6D243171AAAF9DDFDF4A102D5F2E25E7 /* SimpleAlert-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftQRCode";
+			path = "../Target Support Files/SimpleAlert";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1A0C27AF4D8DF1909C06C9D777441F9D /* Headers */ = {
+		0060794D1EEAB46D24EB7F5BFED4037A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAED292D8DE5CA3F2C3EDEEEA732085F /* SwiftQRCode-umbrella.h in Headers */,
+				0A8E1309872203253DFF428430DC55C4 /* Pods-slipcode-master-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C8AADBF76C13C397AD7482DD4186A05 /* Headers */ = {
+		EBF7228FC51C57C07FF73FFEEE38DA6B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C122FF95999FD65218FA07BDEF8FF44B /* Pods-slipcode-master-umbrella.h in Headers */,
+				FBA6D954CFF71863ABA15959F5DF3231 /* SimpleAlert-umbrella.h in Headers */,
+				B34222B903CCAF8EC618BC4F469DD375 /* SimpleAlert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEAA5E7F7692AD4C0D5AEF6B154614CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0210102D48456D154106F391EFE27CAE /* SwiftQRCode-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		895FFE470082941A1485B0456EDF8F74 /* SwiftQRCode */ = {
+		0FD0F54B81ACF01173E097F5FA3C4B10 /* SimpleAlert */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BD27313832498F9EA1D3E473452B5A2 /* Build configuration list for PBXNativeTarget "SwiftQRCode" */;
+			buildConfigurationList = BA94F66D59CF76DDC45D005B03553109 /* Build configuration list for PBXNativeTarget "SimpleAlert" */;
 			buildPhases = (
-				B54A2CF95751C37D1DCC9081C2152491 /* Sources */,
-				5A2502C3F7595879494AEDA126BA89E7 /* Frameworks */,
-				1A0C27AF4D8DF1909C06C9D777441F9D /* Headers */,
+				C15349DAA580AC368E8462E70548154C /* Sources */,
+				57C41B5B7D1F69F98782840CA30DE092 /* Frameworks */,
+				EBF7228FC51C57C07FF73FFEEE38DA6B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleAlert;
+			productName = SimpleAlert;
+			productReference = 371169C4935600F9B062B44E7608BFBF /* SimpleAlert.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3AD7A185031916BE2D7A3D51AAD4CE5E /* Pods-slipcode-master */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1AF1A4647DD3908B1B5D0AB762BCC69 /* Build configuration list for PBXNativeTarget "Pods-slipcode-master" */;
+			buildPhases = (
+				D7BE5BFD50144E8C6EC03DA02A6C309F /* Sources */,
+				2FF8AA3551ACE151324A9A86B2C137E0 /* Frameworks */,
+				0060794D1EEAB46D24EB7F5BFED4037A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB2E9D21E6B6F28AF4D4189508C597B8 /* PBXTargetDependency */,
+				2E97F783EB8E9899BADE2BD875A93FAB /* PBXTargetDependency */,
+			);
+			name = "Pods-slipcode-master";
+			productName = "Pods-slipcode-master";
+			productReference = C1528F21667798660F4C117AAD062893 /* Pods_slipcode_master.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DBA8F5C900E06456887DE16879B68676 /* SwiftQRCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA7F7AD6E1C82B84C774AB8212D68252 /* Build configuration list for PBXNativeTarget "SwiftQRCode" */;
+			buildPhases = (
+				A0493667D83280AC63A75DDD1EDA17F3 /* Sources */,
+				349A270D9FE54026C5032AE8A1D17C26 /* Frameworks */,
+				EEAA5E7F7692AD4C0D5AEF6B154614CF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -203,25 +310,7 @@
 			);
 			name = SwiftQRCode;
 			productName = SwiftQRCode;
-			productReference = 37FF732AFF79B7234EFDA94DFDC4C580 /* SwiftQRCode.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9376B22A057DCD1128ECC8E88D7C8D9B /* Pods-slipcode-master */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3DBB1263AC696C3DE93B557BCE394A7F /* Build configuration list for PBXNativeTarget "Pods-slipcode-master" */;
-			buildPhases = (
-				C3510FC93144177E2D123247DA6ABDBF /* Sources */,
-				A77413F4C0E3C54FEA65E0C93629DE6D /* Frameworks */,
-				3C8AADBF76C13C397AD7482DD4186A05 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8481611FF995DB8FD6D61A120AED30D4 /* PBXTargetDependency */,
-			);
-			name = "Pods-slipcode-master";
-			productName = "Pods-slipcode-master";
-			productReference = CB42C4487E26B671AC7DAC4392287558 /* Pods_slipcode_master.framework */;
+			productReference = 6D4B90E31FE4FA7A242D20F36C1018C6 /* SwiftQRCode.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -233,10 +322,13 @@
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
-					895FFE470082941A1485B0456EDF8F74 = {
+					0FD0F54B81ACF01173E097F5FA3C4B10 = {
 						LastSwiftMigration = 0800;
 					};
-					9376B22A057DCD1128ECC8E88D7C8D9B = {
+					3AD7A185031916BE2D7A3D51AAD4CE5E = {
+						LastSwiftMigration = 0800;
+					};
+					DBA8F5C900E06456887DE16879B68676 = {
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -249,46 +341,94 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C49EAC221D89E220A45F02B3C3A6C3DD /* Products */;
+			productRefGroup = A10D8CD0E7A09C80ED5E0D5A3B1FFA95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9376B22A057DCD1128ECC8E88D7C8D9B /* Pods-slipcode-master */,
-				895FFE470082941A1485B0456EDF8F74 /* SwiftQRCode */,
+				3AD7A185031916BE2D7A3D51AAD4CE5E /* Pods-slipcode-master */,
+				0FD0F54B81ACF01173E097F5FA3C4B10 /* SimpleAlert */,
+				DBA8F5C900E06456887DE16879B68676 /* SwiftQRCode */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B54A2CF95751C37D1DCC9081C2152491 /* Sources */ = {
+		A0493667D83280AC63A75DDD1EDA17F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				462983B8DAFC1609D72FE9C35FC30F65 /* QRCode.swift in Sources */,
-				9C35795734BEBF410AF30FA62F29DDA3 /* SwiftQRCode-dummy.m in Sources */,
+				262F5DCA66A6481BCBD10696C6C7883F /* QRCode.swift in Sources */,
+				7B5BC1B6080C6A3191EEAF4771C88E4D /* SwiftQRCode-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3510FC93144177E2D123247DA6ABDBF /* Sources */ = {
+		C15349DAA580AC368E8462E70548154C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44EA7EC9D6501F397753B301931141D7 /* Pods-slipcode-master-dummy.m in Sources */,
+				099F619FBB552D87930B8C5A76606363 /* SimpleAlert-dummy.m in Sources */,
+				5E349D0A9588DBE46337D94B4F1AC078 /* SimpleAlert.swift in Sources */,
+				0B2BB481712726FE32DB8A57667E7ECC /* SimpleAlert.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7BE5BFD50144E8C6EC03DA02A6C309F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60C3DFD63525CDE6C14F3DE46DC7BE5 /* Pods-slipcode-master-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8481611FF995DB8FD6D61A120AED30D4 /* PBXTargetDependency */ = {
+		2E97F783EB8E9899BADE2BD875A93FAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftQRCode;
-			target = 895FFE470082941A1485B0456EDF8F74 /* SwiftQRCode */;
-			targetProxy = 689FAAE77AB9F7EFFFA34A73569F0924 /* PBXContainerItemProxy */;
+			target = DBA8F5C900E06456887DE16879B68676 /* SwiftQRCode */;
+			targetProxy = 4C2B68A7A50C165EB105BF2AAFD5ADCA /* PBXContainerItemProxy */;
+		};
+		CB2E9D21E6B6F28AF4D4189508C597B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleAlert;
+			target = 0FD0F54B81ACF01173E097F5FA3C4B10 /* SimpleAlert */;
+			targetProxy = 20E2119E45EE90462CC213AA725E4BC9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		02F6597E0A32C89CF1F7BD111DA8E616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27AAFFC2E4B4BEE59145470ED9C18AC5 /* SimpleAlert.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleAlert/SimpleAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleAlert/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleAlert/SimpleAlert.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SimpleAlert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		034014829C1E4434983CF3A690C12017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -331,9 +471,108 @@
 			};
 			name = Debug;
 		};
-		4B27EA53D948BB2FEFA6C6CF92CE5281 /* Debug */ = {
+		0B031600D0DDCA9D56E6380E444190EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF6F41D9B05A4D607CD6191BFE74949D /* SwiftQRCode.xcconfig */;
+			baseConfigurationReference = 543493C333C6D47928E3BB0E6C94F8D0 /* Pods-slipcode-master.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-slipcode-master/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-slipcode-master/Pods-slipcode-master.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_slipcode_master;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2430C5AC5C27923D05766CD3F5367E40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27AAFFC2E4B4BEE59145470ED9C18AC5 /* SimpleAlert.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleAlert/SimpleAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleAlert/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleAlert/SimpleAlert.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SimpleAlert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4EB9B517594D3AD6D390C06B371AEA81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21773F4577D1B09958854BA2373836CC /* Pods-slipcode-master.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-slipcode-master/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-slipcode-master/Pods-slipcode-master.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_slipcode_master;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		51A7A6AE4F39E29464518BCA93D3CF80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48CFFB57C7E79B02610DD205271AE88C /* SwiftQRCode.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -362,9 +601,9 @@
 			};
 			name = Debug;
 		};
-		55363D2FEDBD745EC80A0460BF645546 /* Release */ = {
+		77228E11DB1382002A0181A7816FB82F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF6F41D9B05A4D607CD6191BFE74949D /* SwiftQRCode.xcconfig */;
+			baseConfigurationReference = 48CFFB57C7E79B02610DD205271AE88C /* SwiftQRCode.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -383,40 +622,6 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftQRCode/SwiftQRCode.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftQRCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B11F4004088D68EE7E07CF10E61429A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21773F4577D1B09958854BA2373836CC /* Pods-slipcode-master.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-slipcode-master/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-slipcode-master/Pods-slipcode-master.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_slipcode_master;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -464,41 +669,6 @@
 			};
 			name = Release;
 		};
-		E9B3B410A9DC542D6947C6BFBE7AA3B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 543493C333C6D47928E3BB0E6C94F8D0 /* Pods-slipcode-master.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-slipcode-master/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-slipcode-master/Pods-slipcode-master.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_slipcode_master;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,20 +681,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DBB1263AC696C3DE93B557BCE394A7F /* Build configuration list for PBXNativeTarget "Pods-slipcode-master" */ = {
+		AA7F7AD6E1C82B84C774AB8212D68252 /* Build configuration list for PBXNativeTarget "SwiftQRCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E9B3B410A9DC542D6947C6BFBE7AA3B7 /* Debug */,
-				B11F4004088D68EE7E07CF10E61429A1 /* Release */,
+				51A7A6AE4F39E29464518BCA93D3CF80 /* Debug */,
+				77228E11DB1382002A0181A7816FB82F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BD27313832498F9EA1D3E473452B5A2 /* Build configuration list for PBXNativeTarget "SwiftQRCode" */ = {
+		B1AF1A4647DD3908B1B5D0AB762BCC69 /* Build configuration list for PBXNativeTarget "Pods-slipcode-master" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B27EA53D948BB2FEFA6C6CF92CE5281 /* Debug */,
-				55363D2FEDBD745EC80A0460BF645546 /* Release */,
+				0B031600D0DDCA9D56E6380E444190EA /* Debug */,
+				4EB9B517594D3AD6D390C06B371AEA81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA94F66D59CF76DDC45D005B03553109 /* Build configuration list for PBXNativeTarget "SimpleAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F6597E0A32C89CF1F7BD111DA8E616 /* Debug */,
+				2430C5AC5C27923D05766CD3F5367E40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
